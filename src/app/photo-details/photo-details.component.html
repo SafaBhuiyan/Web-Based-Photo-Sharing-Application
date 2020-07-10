@@ -1,0 +1,25 @@
+
+
+<div *ngIf = "photo">
+<img src = "{{photo.photoUrl}}" width="400">
+</div>
+
+
+<br>
+    <div class="form-group">
+
+      <input type="text" class="form-control" [(ngModel)]="comment">
+      
+    </div>
+    <button type="submit" class="btn btn-primary"(click)="makeComment()">Comment</button>
+    
+
+    <div *ngIf = "comment" class="alert alert-primary" role="alert" style="text-align: left;">
+        {{comment}}
+      </div>
+    
+
+    <div class="alert alert-secondary" role="alert"  *ngFor = "let oldComment of allComments" style="text-align: center;">
+        {{oldComment.comment}}-{{oldComment.createdBy}} on {{oldComment.dateCreated}}
+    </div>
+        

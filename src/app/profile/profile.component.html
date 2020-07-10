@@ -1,0 +1,15 @@
+<div class="card text-center">
+    <div class="card-header">
+      Profile
+    </div>
+    <div class="card-body" *ngIf = "user">
+      <h5 class="card-title">{{user.name}}</h5>
+      <p class="card-text"><img src="{{user.profilePhotoUrl}}" class="rounded-circle" alt="{{user.name}}"></p>
+      <a  class="btn btn-primary">{{user.emailAddress}}</a>
+    </div>
+    <div class="card-footer text-muted" *ngIf = "user">
+        <strong>{{user.id}}</strong>
+    </div>
+  </div>
+
+
